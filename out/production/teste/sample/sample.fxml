@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="502.0" prefWidth="756.0" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="600.0" maxWidth="1153.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1011.0">
+         <children>
+            <VBox layoutX="38.0" layoutY="87.0" prefHeight="294.0" prefWidth="240.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="150.0" text="NOME DO MORADOR:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfNome">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="-12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="20.0" prefWidth="61.0" text="BLOCO:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfBloco">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="-12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="20.0" prefWidth="196.0" text="NÚMERO DO APARTAMENTO:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfApto">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="-12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="20.0" prefWidth="155.0" text="DATA PARA AGENDAR:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfData" prefHeight="25.0" prefWidth="169.0">
+                     <VBox.margin>
+                        <Insets top="-12.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <TableView fx:id="tvAgendaPiscina" layoutX="313.0" layoutY="38.0" prefHeight="417.0" prefWidth="643.0">
+              <columns>
+                <TableColumn fx:id="colMorador" prefWidth="243.0" text="MORADOR" />
+                  <TableColumn fx:id="colBloco" prefWidth="98.0" text="BLOCO" />
+                  <TableColumn fx:id="colNumApto" prefWidth="172.0" text="NÚMERO APARTAMENTO" />
+                  <TableColumn fx:id="colData" prefWidth="129.0" text="DATA" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnAgendar" layoutX="38.0" layoutY="381.0" mnemonicParsing="false" onAction="#hundleButtonActioon" text="AGENDAR" />
+            <Button fx:id="btnAlterar" layoutX="126.0" layoutY="381.0" mnemonicParsing="false" onAction="#hundleButtonActioon" text="ALTERAR" />
+            <Button fx:id="btnExcluir" layoutX="208.0" layoutY="381.0" mnemonicParsing="false" onAction="#hundleButtonActioon" text="EXCLUIR" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
